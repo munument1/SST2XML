@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+
+build/
+dist/
+
+*_test/
+batch_test/
+error_regression_test/
+ssu8_test/
+
+test_output.xml
+lang_pair_test.xml
+*.log
