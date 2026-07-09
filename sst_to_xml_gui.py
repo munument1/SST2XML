@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Batch Tkinter GUI for the SST to FallHook XML converter."""
+"""Batch Tkinter GUI for the SST to XML converter."""
 
 from __future__ import annotations
 
@@ -11,17 +11,17 @@ import threading
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
-from sst_to_fallhook_xml import convert_file, default_addon, default_output_path, infer_addon_from_path, parse_language_pair, read_sst
+from sst_to_xml import convert_file, default_addon, default_output_path, infer_addon_from_path, parse_language_pair, read_sst
 
 
-APP_TITLE = "SST to FallHook XML"
+APP_TITLE = "SST to XML"
 
 
 def settings_path() -> pathlib.Path:
     base = os.environ.get("APPDATA")
     if base:
-        return pathlib.Path(base) / "SST2FallHookXML" / "settings.json"
-    return pathlib.Path.home() / ".sst2fallhookxml" / "settings.json"
+        return pathlib.Path(base) / "SST2XML" / "settings.json"
+    return pathlib.Path.home() / ".sst2xml" / "settings.json"
 
 
 def load_settings() -> dict[str, str]:

@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['sst_to_fallhook_xml_gui.py'],
+    ['sst_to_xml_gui.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='SST2FallHookXML',
+    name='SST2XML',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

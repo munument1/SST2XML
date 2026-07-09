@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Convert an xTranslator SST dictionary to FallHook-compatible XML.
+"""Convert xTranslator SST dictionaries to XML translation resources.
 
 The generated XML keeps the xTranslator SSTXMLRessources shape, but writes
-bracket FormIDs in the EDID element so FallHook can resolve them without
-EditorIDs.
+bracket FormIDs in the EDID element instead of requiring EditorIDs.
 """
 
 from __future__ import annotations
@@ -311,7 +310,7 @@ def convert_file(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Convert xTranslator .sst dictionaries to FallHook XML."
+        description="Convert xTranslator .sst dictionaries to XML."
     )
     parser.add_argument("input", type=pathlib.Path, nargs="+", help="Input .sst file(s)")
     parser.add_argument(
